@@ -1,10 +1,10 @@
 {
   "name": "01",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "scr/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --entry=./index.js --output-filename=bundle.js --mode=development"
+    "build": "webpack --output-filename=bundle.js --mode=development"
   },
   "dependencies": {
     "webpack": "^5.6.0",
