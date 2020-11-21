@@ -4,7 +4,7 @@
   "main": "scr/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --output-filename=bundle.js --mode=development"
+    "build": "webpack"
   },
   "dependencies": {
     "webpack": "^5.6.0",
