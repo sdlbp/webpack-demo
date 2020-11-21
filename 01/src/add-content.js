@@ -1,3 +1,3 @@
 export default function () {
-  document.write("hello world, file config")
+  document.write("hello world, webpack dev server1")
 }
