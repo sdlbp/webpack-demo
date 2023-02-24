@@ -24,6 +24,17 @@ importers:
     devDependencies:
       webpack-dev-server: 3.11.3_pda42hcaj7d62cr262fr632kue
 
+  packages/02:
+    specifiers:
+      webpack: ^5.6.0
+      webpack-cli: ^4.2.0
+      webpack-dev-server: ^3.11.0
+    dependencies:
+      webpack: 5.75.0_webpack-cli@4.10.0
+      webpack-cli: 4.10.0_ixwfotxft53uv5r5hjf7zsiiya
+    devDependencies:
+      webpack-dev-server: 3.11.3_webpack@5.75.0
+
 packages:
 
   /@discoveryjs/json-ext/0.5.7:
@@ -209,7 +220,7 @@ packages:
         optional: true
     dependencies:
       webpack-cli: 4.10.0_ixwfotxft53uv5r5hjf7zsiiya
-      webpack-dev-server: 3.11.3_pda42hcaj7d62cr262fr632kue
+      webpack-dev-server: 3.11.3_webpack@5.75.0
 
   /@xtuc/ieee754/1.2.0:
     resolution: {integrity: sha1-7vAUoxRa5Hehy8AM0eVSM23Ot5A=, tarball: '@xtuc/ieee754/download/@xtuc/ieee754-1.2.0.tgz'}
@@ -639,6 +650,12 @@ packages:
       ms: 2.1.3
       supports-color: 6.1.0
 
+  /debug/4.3.4:
+    resolution: {integrity: sha1-Exn2V5NX8jONMzfSzdSRS7XcyGU=, tarball: debug/download/debug-4.3.4.tgz}
+    engines: {node: '>=6.0'}
+    dependencies:
+      ms: 2.1.2
+
   /debug/4.3.4_supports-color@6.1.0:
     resolution: {integrity: sha1-Exn2V5NX8jONMzfSzdSRS7XcyGU=, tarball: debug/download/debug-4.3.4.tgz}
     engines: {node: '>=6.0'}
@@ -650,6 +667,7 @@ packages:
     dependencies:
       ms: 2.1.2
       supports-color: 6.1.0
+    dev: true
 
   /decamelize/1.2.0:
     resolution: {integrity: sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=, tarball: decamelize/download/decamelize-1.2.0.tgz}
@@ -973,6 +991,10 @@ packages:
       locate-path: 5.0.0
       path-exists: 4.0.0
 
+  /follow-redirects/1.15.2:
+    resolution: {integrity: sha1-tGCGQUS6Y/JoEJbydMTlcCbaLBM=, tarball: follow-redirects/download/follow-redirects-1.15.2.tgz}
+    engines: {node: '>=4.0'}
+
   /follow-redirects/1.15.2_debug@4.3.4:
     resolution: {integrity: sha1-tGCGQUS6Y/JoEJbydMTlcCbaLBM=, tarball: follow-redirects/download/follow-redirects-1.15.2.tgz}
     engines: {node: '>=4.0'}
@@ -983,6 +1005,7 @@ packages:
         optional: true
     dependencies:
       debug: 4.3.4_supports-color@6.1.0
+    dev: true
 
   /for-in/1.0.2:
     resolution: {integrity: sha1-gQaNKVqBQuwKxybG4iAMMPttXoA=, tarball: for-in/download/for-in-1.0.2.tgz}
@@ -1169,6 +1192,17 @@ packages:
   /http-parser-js/0.5.8:
     resolution: {integrity: sha1-ryMJDZrE4kVz3m9q7MnYSki/IOM=, tarball: http-parser-js/download/http-parser-js-0.5.8.tgz}
 
+  /http-proxy-middleware/0.19.1_supports-color@6.1.0:
+    resolution: {integrity: sha1-GDx9xKoUeRUDBkmMIQza+WCApDo=, tarball: http-proxy-middleware/download/http-proxy-middleware-0.19.1.tgz}
+    engines: {node: '>=4.0.0'}
+    dependencies:
+      http-proxy: 1.18.1
+      is-glob: 4.0.3
+      lodash: 4.17.21
+      micromatch: 3.1.10_supports-color@6.1.0
+    transitivePeerDependencies:
+      - supports-color
+
   /http-proxy-middleware/0.19.1_tmpgdztspuwvsxzgjkhoqk7duq:
     resolution: {integrity: sha1-GDx9xKoUeRUDBkmMIQza+WCApDo=, tarball: http-proxy-middleware/download/http-proxy-middleware-0.19.1.tgz}
     engines: {node: '>=4.0.0'}
@@ -1180,6 +1214,15 @@ packages:
     transitivePeerDependencies:
       - debug
       - supports-color
+    dev: true
+
+  /http-proxy/1.18.1:
+    resolution: {integrity: sha1-QBVB8FNIhLv5UmAzTnL4juOXZUk=, tarball: http-proxy/download/http-proxy-1.18.1.tgz}
+    engines: {node: '>=8.0.0'}
+    dependencies:
+      eventemitter3: 4.0.7
+      follow-redirects: 1.15.2
+      requires-port: 1.0.0
 
   /http-proxy/1.18.1_debug@4.3.4:
     resolution: {integrity: sha1-QBVB8FNIhLv5UmAzTnL4juOXZUk=, tarball: http-proxy/download/http-proxy-1.18.1.tgz}
@@ -1190,6 +1233,7 @@ packages:
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
+    dev: true
 
   /iconv-lite/0.4.24:
     resolution: {integrity: sha1-ICK0sl+93CHS9SSXSkdKr+czkIs=, tarball: iconv-lite/download/iconv-lite-0.4.24.tgz}
@@ -2226,6 +2270,16 @@ packages:
     resolution: {integrity: sha1-dHIq8y6WFOnCh6jQu95IteLxomM=, tarball: source-map/download/source-map-0.6.1.tgz}
     engines: {node: '>=0.10.0'}
 
+  /spdy-transport/3.0.0:
+    resolution: {integrity: sha1-ANSGOmQArXXfkzYaFghgXl3NzzE=, tarball: spdy-transport/download/spdy-transport-3.0.0.tgz}
+    dependencies:
+      debug: 4.3.4
+      detect-node: 2.1.0
+      hpack.js: 2.1.6
+      obuf: 1.1.2
+      readable-stream: 3.6.0
+      wbuf: 1.7.3
+
   /spdy-transport/3.0.0_supports-color@6.1.0:
     resolution: {integrity: sha1-ANSGOmQArXXfkzYaFghgXl3NzzE=, tarball: spdy-transport/download/spdy-transport-3.0.0.tgz}
     dependencies:
@@ -2237,6 +2291,17 @@ packages:
       wbuf: 1.7.3
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /spdy/4.0.2:
+    resolution: {integrity: sha1-t09GYgOj7aRSwCSSuR+56EonZ3s=, tarball: spdy/download/spdy-4.0.2.tgz}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      debug: 4.3.4
+      handle-thing: 2.0.1
+      http-deceiver: 1.2.7
+      select-hose: 2.0.0
+      spdy-transport: 3.0.0
 
   /spdy/4.0.2_supports-color@6.1.0:
     resolution: {integrity: sha1-t09GYgOj7aRSwCSSuR+56EonZ3s=, tarball: spdy/download/spdy-4.0.2.tgz}
@@ -2249,6 +2314,7 @@ packages:
       spdy-transport: 3.0.0_supports-color@6.1.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /split-string/3.1.0:
     resolution: {integrity: sha1-fLCd2jqGWFcFxks5pkZgOGguj+I=, tarball: split-string/download/split-string-3.1.0.tgz}
@@ -2517,7 +2583,7 @@ packages:
       interpret: 2.2.0
       rechoir: 0.7.1
       webpack: 5.75.0_webpack-cli@4.10.0
-      webpack-dev-server: 3.11.3_pda42hcaj7d62cr262fr632kue
+      webpack-dev-server: 3.11.3_webpack@5.75.0
       webpack-merge: 5.8.0
 
   /webpack-dev-middleware/3.7.3_webpack@5.75.0:
@@ -2575,6 +2641,52 @@ packages:
       url: 0.11.0
       webpack: 5.75.0_webpack-cli@4.10.0
       webpack-cli: 4.10.0_ixwfotxft53uv5r5hjf7zsiiya
+      webpack-dev-middleware: 3.7.3_webpack@5.75.0
+      webpack-log: 2.0.0
+      ws: 6.2.2
+      yargs: 13.3.2
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+    dev: true
+
+  /webpack-dev-server/3.11.3_webpack@5.75.0:
+    resolution: {integrity: sha1-jIa50oEr8TXTybzm8HtxjjD3w9M=, tarball: webpack-dev-server/download/webpack-dev-server-3.11.3.tgz}
+    engines: {node: '>= 6.11.5'}
+    hasBin: true
+    peerDependencies:
+      webpack: ^4.0.0 || ^5.0.0
+    dependencies:
+      ansi-html-community: 0.0.8
+      bonjour: 3.5.0
+      chokidar: 2.1.8_supports-color@6.1.0
+      compression: 1.7.4_supports-color@6.1.0
+      connect-history-api-fallback: 1.6.0
+      debug: 4.3.4
+      del: 4.1.1
+      express: 4.18.2_supports-color@6.1.0
+      html-entities: 1.4.0
+      http-proxy-middleware: 0.19.1_supports-color@6.1.0
+      import-local: 2.0.0
+      internal-ip: 4.3.0
+      ip: 1.1.8
+      is-absolute-url: 3.0.3
+      killable: 1.0.1
+      loglevel: 1.8.1
+      opn: 5.5.0
+      p-retry: 3.0.1
+      portfinder: 1.0.32_supports-color@6.1.0
+      schema-utils: 1.0.0
+      selfsigned: 1.10.14
+      semver: 6.3.0
+      serve-index: 1.9.1_supports-color@6.1.0
+      sockjs: 0.3.24
+      sockjs-client: 1.6.1_supports-color@6.1.0
+      spdy: 4.0.2
+      strip-ansi: 3.0.1
+      supports-color: 6.1.0
+      url: 0.11.0
+      webpack: 5.75.0_webpack-cli@4.10.0
       webpack-dev-middleware: 3.7.3_webpack@5.75.0
       webpack-log: 2.0.0
       ws: 6.2.2

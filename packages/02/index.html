@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<button id="button">加载</button>
+<script>
+    const btn = document.getElementById('button')
+    btn.addEventListener('click', function () {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = './dist/index.js';
+        document.body.appendChild(script);
+    })
+</script>
+</body>
+</html>
